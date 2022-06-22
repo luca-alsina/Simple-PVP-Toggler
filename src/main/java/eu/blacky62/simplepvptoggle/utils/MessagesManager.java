@@ -1,13 +1,15 @@
 package eu.blacky62.simplepvptoggle.utils;
 
+import me.clip.placeholderapi.PlaceholderAPI;
 import org.bukkit.ChatColor;
+import org.bukkit.entity.Player;
 
 import java.awt.*;
 import java.util.List;
 
 public class MessagesManager {
 
-    public static String formatMultilines(List<String> messages) {
+    public static String formatMultilines(Player player, List<String> messages) {
 
         StringBuilder message = new StringBuilder("");
 
@@ -19,12 +21,12 @@ public class MessagesManager {
         }
 
         // On retourne le résultat en parsant les couleurs
-        return parseColors(message.toString());
+        return fullParse(player, message.toString());
     }
 
-    public static String fullParse( String message ) {
+    public static String fullParse(Player player, String message) {
 
-        return parseColors(parsePlaceholders(message));
+        return parseColors(parsePlaceholders(player, message));
 
     }
 
@@ -32,8 +34,8 @@ public class MessagesManager {
         return ChatColor.translateAlternateColorCodes('&', message);
     }
 
-    public static String parsePlaceholders(String message) {
-
+    public static String parsePlaceholders(Player player, String message) {
+        return PlaceholderAPI.setPlaceholders(player, message);
     }
 
 }

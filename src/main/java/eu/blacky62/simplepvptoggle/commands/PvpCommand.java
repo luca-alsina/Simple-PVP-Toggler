@@ -32,7 +32,7 @@ public class PvpCommand implements CommandExecutor {
 
             }*/
 
-            sender.sendMessage(MessagesManager.formatMultilines(plugin.getConfig().getStringList("pvp.messages.command_help")));
+            sender.sendMessage(MessagesManager.formatMultilines((Player) sender, plugin.getConfig().getStringList("pvp.messages.command_help")));
         }
 
 /*        if (sender instanceof Player) {

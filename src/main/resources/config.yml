@@ -9,7 +9,7 @@ pvp:
   force_pvp_enable_on_attack: false # NEED can_attack_in_passive SET TO TRUE ! || true = If a player in passive attack another player, their passive mode will be disabled.
   messages:
     command_help:
-      - "======---- PVP Toggler ----======"
+      - "======---- PVP Toggler for %player_name% ----======"
       - " /pvp on => Enable the pvp for you."
       - " /pvp off => Disable the pvp for you."
       - " /pvp check {player} => Check the pvp status of a player"
