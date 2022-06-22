@@ -1,0 +1,24 @@
+general:
+  messages:
+    noperm: "&4You don't have permission to use this command !" # Message displayed when a player is trying to use the command without the permission.
+    notplayer: "&cThis command is for players only !" # Message displayed when the command is used by the console (not possible in our case).
+    incorrect_usage: "Incorrect command usage !"
+
+pvp:
+  can_attack_in_passive: false # true = The player can attach others players when him PVP is disabled.
+  force_pvp_enable_on_attack: false # NEED can_attack_in_passive SET TO TRUE ! || true = If a player in passive attack another player, their passive mode will be disabled.
+  messages:
+    command_help:
+      - "======---- PVP Toggler ----======"
+      - " /pvp on => Enable the pvp for you."
+      - " /pvp off => Disable the pvp for you."
+      - " /pvp check {player} => Check the pvp status of a player"
+    enabled: "PVP Enabled"
+    force_enabled: ""
+    disabled: "PVP Disabled"
+    force_disabled: ""
+    status:
+      on: '&2Enabled' # WIP
+      off: '&cDisabled' # WIP
+    force_enable_pvp_after_attack: "" # WIP
+

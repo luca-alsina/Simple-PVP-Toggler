@@ -1,0 +1,10 @@
+name: SimplePVPToggler
+version: '${project.version}'
+author: blacky62
+main: eu.blacky62.simplepvptoggle.Main
+api-version: 1.16
+depend:
+  - PlaceholderAPI
+commands:
+  pvp:
+    description: Personal PVP options
